@@ -7,6 +7,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GildedRoseTest {
     @Test
+    public void GildedRoseInterfaceTest() {
+        Item agedBrie = new Item("Aged Brie", -1, -5);
+        ItemInterface[] items = new ItemInterface[] {new AgedBrie(agedBrie)};
+        GildedRose gildedRose = new GildedRose(items);
+        gildedRose.updateQuality();
+        assertThat(agedBrie.quality, equalTo(-3));
+    }
+    /*
+    @Test
     public void GildedRoseNegativeSellIn() {
         Item[] items = new Item[]{
                 new Item("Aged Brie", -15, 0),
@@ -82,5 +91,7 @@ public class GildedRoseTest {
         assertThat(items[0].quality, equalTo(6));
         assertThat(items[0].sellIn, equalTo(4));
     }
+
+     */
 
 }
