@@ -79,8 +79,8 @@ public class GildedRoseTest {
                 new Item("Elixir of the Mongoose", 5, 7)};
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
-        assertThat(items[0].quality, equalTo(7));
-        assertThat(items[0].sellIn, equalTo(5));
+        assertThat(items[0].quality, equalTo(6));
+        assertThat(items[0].sellIn, equalTo(4));
     }
 
 }
